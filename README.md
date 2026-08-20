@@ -8,7 +8,13 @@ Needs **Node.js** on PATH (`node -v`).
 
 ## Install (any PC)
 
-Copy this folder anywhere, then:
+Published GitHub install:
+
+```bat
+herdr plugin install itisvincent/herdr-pane-to-tab --yes
+```
+
+For local development, copy this folder anywhere, then:
 
 ```bat
 herdr plugin link C:\path\to\herdr-pane-to-tab
