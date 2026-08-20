@@ -1,0 +1,26 @@
+id = "example.pane-to-tab"
+name = "Pane to Tab"
+version = "0.2.0"
+min_herdr_version = "0.7.0"
+description = "Move the focused pane to a new tab, or join it into a chosen tab."
+platforms = ["linux", "macos", "windows"]
+
+# Portable: no machine-specific paths. run.ps1 strips Windows \\?\ prefixes.
+
+[[panes]]
+id = "picker"
+title = "Join tab"
+placement = "popup"
+command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "run.ps1", "picker.js"]
+
+[[actions]]
+id = "move"
+title = "Move focused pane to new tab"
+contexts = ["workspace"]
+command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "run.ps1", "move.js"]
+
+[[actions]]
+id = "join"
+title = "Join focused pane into a tab"
+contexts = ["workspace"]
+command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "run.ps1", "join.js"]
